@@ -3,7 +3,7 @@ date_added: 2020-12-29
 title: ESP-12F 4 Channel
 model: ESP12F_Relay_X4
 image: /assets/images/ESP12F_Relay_X4.jpg
-template9: '{"NAME":"ESP12F_Relay_X4","GPIO":[1,1,1,1,1,1,1,1,226,227,225,1,224,1],"FLAG":0,"BASE":18}' 
+template9: '{"NAME":"ESP12F_Relay_X4","GPIO":[0,0,544,1,1,448,1,1,226,227,225,1,224,1],"FLAG":0,"BASE":18}' 
 link: https://www.aliexpress.com/item/1005001690637871.html
 link2: 
 mlink: 
@@ -14,4 +14,6 @@ standard: global
 ---
 Headers must be soldered and jumpers needs to be installed for enabling relays. 
 
+One blue LED is directly on ESP12-F and is intern connected to GPIO 2. In this template it's a LedLink (WIFI connect) as an example.<br> 
+The second blue LED is on the Board (D14) ist connected to GPIO 5. In this template it's a PWM LED driver as an example.<br> 
 The board uses GPIO16 and so Relay1 is always turned ON when power is applied to the board, causing a brief on/off pulse on the relay as Tasmota loads and turns it off again. Of course, if the last state was ON, then it will stay ON. It's still a very useful board at a bargain price; just a shame the designer was too lazy to route a different GPIO pin.
